@@ -256,3 +256,121 @@ struct __declspec(uuid("A4AAAE00-22E5-4742-ABB7-379D9493A3B7")) IShdocvwBroker :
 
 _COM_SMARTPTR_TYPEDEF(IIEUserBroker, __uuidof(IIEUserBroker));
 _COM_SMARTPTR_TYPEDEF(IShdocvwBroker, __uuidof(IShdocvwBroker));
+
+
+struct __declspec(uuid("A729AC6C-EE15-4599-99DE-A54AD734C950")) ITabWindowManager : IUnknown
+{
+};
+
+struct __declspec(uuid("BFB070CE-95F2-4EDB-BAB5-4DAD9E6A2905")) ITabRecoveryData : IUnknown
+{
+public:
+
+	virtual HRESULT STDMETHODCALLTYPE  GetTabId(_GUID *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetCurrentLocation(BSTR) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetCurrentLocation(unsigned short * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetCurrentTitle(BSTR) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetCurrentTitle(unsigned short**) = 0;;
+	virtual HRESULT STDMETHODCALLTYPE  SetIsInPrivate(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetFlags(unsigned long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  Recovery(ITabWindowManager *, unsigned long, long, long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  RecoveryByPosition(ITabWindowManager *, long, unsigned long, long, long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  DeleteSelf(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  Copy(ITabRecoveryData *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetStorage(IStorage * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetRecoveryTime(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetRecoveryCount(unsigned long) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetRecoveryCount(unsigned long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  ShouldRecover(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetCurrentGroup(long) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetCurrentGroup(long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetCurrentDecoration(long) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetCurrentDecoration(long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetLastVisibleTime(_FILETIME) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetLastVisibleTime(_FILETIME *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetTabImage(IStream *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetTabImage(IStream * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  FlushTabImage() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  Flush(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CloseStorage(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetIsIMPinnedSite(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetIsIMPinnedSite(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetHasLaunched(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetHasLaunched(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetIsHidden(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetNavigateCount(unsigned long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetReuseTabId() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  RemoveReuseTabId() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetReuseTabId(unsigned short const *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetReadingModeData(IStream * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetReadingModeData() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GeneratePartialTravelLogEntryForCurrentLocationIfNecessary(void const *, int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetShouldRecoverToHalfTab(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetShouldRecoverToHalfTab(int *) = 0;
+};
+
+struct __declspec(uuid("5C333B75-A015-4564-8BF3-998CCC4FF9F5")) IRecoveryStore : IUnknown
+{
+
+public:
+
+	virtual HRESULT STDMETHODCALLTYPE  Initialize(DWORD dwProcessId, int, int, BSTR url) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  InitializeFromFile() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CreateFrame(REFGUID, void*, void*) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CloseFrame() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetFrameCount(unsigned int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetFrameId() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetFrameIESession(unsigned int, unsigned long *, unsigned long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetType(void *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CreateTab(_GUID const &, BSTR name, ITabRecoveryData * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CreateTabByPosition() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  AddTabEntry(_GUID const &, _GUID const &) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CloseTab(_GUID const &, _GUID const &) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  RemoveTabEntry(_GUID const &, _GUID const &) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetTabCount(_GUID const &, unsigned int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetTab(_GUID const &, int, ITabRecoveryData * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetTabByGuid(_GUID const &, _GUID const &, ITabRecoveryData * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetOrderedTab(_GUID const &, unsigned int, ITabRecoveryData * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetOrderedTabPosition(_GUID const &, _GUID const &, unsigned int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetClosedTabCount(unsigned int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetClosedTab(_GUID const &, ITabRecoveryData * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  DeleteClosedTab(_GUID const &) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  Recover() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  RecoverSession(ITabWindowManager *, unsigned long) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  RecoverFrame(_GUID const &, ITabWindowManager *, unsigned long) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  Flush(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  DeleteSelf() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  DeleteAllTabs() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  DeleteOnLastRelease(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  Shutdown(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  Restart(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  IsShutdown(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetCompID(unsigned long *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  IsInPrivate(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  IsExtOff(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetFrameCLSID(_GUID *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  UpdateFrameActivatedTime(_GUID const &) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetActiveTab(_GUID const &, _GUID const &) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetActiveTab(_GUID const &, _GUID *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SwitchTabFrame(_GUID const &, _GUID const &, _GUID const &) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  DeleteExistingStores(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetClearDataSessionFlag(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  FindAndInitializeCrashedSessions(int, int, int *, int *, int *, int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetIsSuspended(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  IsSuspended(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetHasPrivateTabs(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  HasPrivateTabs(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetSiteModeAppId() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetSiteModeAppId(unsigned short * *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CleanUnusedSiteModeRecoveryData(int) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  HasCrashData(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  GetFrameLastActivatedTime(unsigned int, _FILETIME *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  CleanActiveRecoveryStores() = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetNoPrompt(void) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  IsNoPrompt(int *) = 0;
+	virtual HRESULT STDMETHODCALLTYPE  SetRecoveryPending(int) = 0;
+
+};
+
+_COM_SMARTPTR_TYPEDEF(IRecoveryStore, __uuidof(IRecoveryStore));
+_COM_SMARTPTR_TYPEDEF(ITabRecoveryData, __uuidof(ITabRecoveryData));

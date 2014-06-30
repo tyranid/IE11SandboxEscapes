@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2014-0268", "CVE-2014-0
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2014-0257", "CVE-2014-0257\CVE-2014-0257.vcxproj", "{2A46841E-E3FC-42FF-BCDF-70F76E757E26}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2014-1778", "CVE-2014-1778\CVE-2014-1778.vcxproj", "{FB766653-36F3-439B-A038-43BE21DC9878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -71,6 +73,14 @@ Global
 		{2A46841E-E3FC-42FF-BCDF-70F76E757E26}.Release|Win32.Build.0 = Release|Win32
 		{2A46841E-E3FC-42FF-BCDF-70F76E757E26}.Release|x64.ActiveCfg = Release|x64
 		{2A46841E-E3FC-42FF-BCDF-70F76E757E26}.Release|x64.Build.0 = Release|x64
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Debug|Win32.Build.0 = Debug|Win32
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Debug|x64.ActiveCfg = Debug|x64
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Debug|x64.Build.0 = Debug|x64
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Release|Win32.ActiveCfg = Release|Win32
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Release|Win32.Build.0 = Release|Win32
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Release|x64.ActiveCfg = Release|x64
+		{FB766653-36F3-439B-A038-43BE21DC9878}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
