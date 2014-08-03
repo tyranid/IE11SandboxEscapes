@@ -19,8 +19,9 @@ REGLN - Manage Windows Rregistry Links                           V20R0
 
 --------------------------------------------------------------------*/
 
-#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
 
+#include "stdafx.h"
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>

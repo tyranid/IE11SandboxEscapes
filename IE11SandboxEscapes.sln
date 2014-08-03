@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InjectDll", "InjectDll\InjectDll.vcxproj", "{4AD1637F-88D8-4AF8-ADF4-027272C10BDD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2013-5045", "CVE-2013-5045\CVE-2013-5045.vcxproj", "{A31EEDC1-5B69-42E9-BAE4-717DA6AF9E52}"
@@ -16,6 +14,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2014-0257", "CVE-2014-0257\CVE-2014-0257.vcxproj", "{2A46841E-E3FC-42FF-BCDF-70F76E757E26}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2014-1778", "CVE-2014-1778\CVE-2014-1778.vcxproj", "{FB766653-36F3-439B-A038-43BE21DC9878}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2014-0520", "CVE-2014-0520\CVE-2014-0520.vcxproj", "{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +81,14 @@ Global
 		{FB766653-36F3-439B-A038-43BE21DC9878}.Release|Win32.Build.0 = Release|Win32
 		{FB766653-36F3-439B-A038-43BE21DC9878}.Release|x64.ActiveCfg = Release|x64
 		{FB766653-36F3-439B-A038-43BE21DC9878}.Release|x64.Build.0 = Release|x64
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Debug|Win32.Build.0 = Debug|Win32
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Debug|x64.ActiveCfg = Debug|x64
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Debug|x64.Build.0 = Debug|x64
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Release|Win32.ActiveCfg = Release|Win32
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Release|Win32.Build.0 = Release|Win32
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Release|x64.ActiveCfg = Release|x64
+		{324B78A5-BCE5-4495-B17A-5C3F361AC5D4}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
