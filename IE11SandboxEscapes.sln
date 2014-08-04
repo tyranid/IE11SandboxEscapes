@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CVE-2014-0520", "CVE-2014-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpElevationPolicy", "DumpElevationPolicy\DumpElevationPolicy.csproj", "{57846C94-644E-41C1-A869-81FCB22C2FBB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExampleDll", "ExampleDll\ExampleDll.vcxproj", "{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -156,7 +158,23 @@ Global
 		{57846C94-644E-41C1-A869-81FCB22C2FBB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{57846C94-644E-41C1-A869-81FCB22C2FBB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{57846C94-644E-41C1-A869-81FCB22C2FBB}.Release|Win32.ActiveCfg = Release|Any CPU
+		{57846C94-644E-41C1-A869-81FCB22C2FBB}.Release|Win32.Build.0 = Release|Any CPU
 		{57846C94-644E-41C1-A869-81FCB22C2FBB}.Release|x64.ActiveCfg = Release|Any CPU
+		{57846C94-644E-41C1-A869-81FCB22C2FBB}.Release|x64.Build.0 = Release|Any CPU
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Debug|Win32.Build.0 = Debug|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Debug|x64.ActiveCfg = Debug|x64
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Debug|x64.Build.0 = Debug|x64
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Release|Any CPU.ActiveCfg = Release|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Release|Win32.ActiveCfg = Release|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Release|Win32.Build.0 = Release|Win32
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Release|x64.ActiveCfg = Release|x64
+		{35D565CA-70F2-4A48-A6CB-A58F80AA47C6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

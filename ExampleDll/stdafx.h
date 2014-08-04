@@ -7,7 +7,5 @@
 
 #include "targetver.h"
 
-#include <stdio.h>
-#include <tchar.h>
-#include <Windows.h>
-#include <TlHelp32.h>
+#include <windows.h>
+#include <Utils.h>
